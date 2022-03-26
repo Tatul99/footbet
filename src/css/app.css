@@ -1,1 +1,25 @@
 /* app global css */
+* {
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: "Arimo";
+  src: url("../../public/fonts/Arimo-VariableFont_wght.ttf");
+}
+body {
+  overflow-x: hidden;
+  font-family: "Arimo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+
+  color: #ffffff;
+}
+@media all and (max-width: 500px) {
+  body {
+    font-size: 11px;
+  }
+}
