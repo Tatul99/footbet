@@ -18,6 +18,19 @@ body {
 
   color: #ffffff;
 }
+.q-img__content {
+  display: flex;
+  align-items: flex-end;
+}
+.q-icon {
+  color: red;
+}
+#q-app {
+  min-height: 10vh;
+}
+.q-pa-md {
+  background: rgba(42, 64, 90);
+}
 @media all and (max-width: 500px) {
   body {
     font-size: 11px;

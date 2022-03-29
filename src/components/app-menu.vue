@@ -61,7 +61,7 @@ export default {
     rgba(44, 44, 44, 0) 106.17%
   );
   /* width: 170px; */
-
+  border: unset;
   position: relative;
 }
 .line {

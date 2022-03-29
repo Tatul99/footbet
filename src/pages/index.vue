@@ -1,9 +1,16 @@
 <template>
-  <div class="text">Hello World</div>
+  <div class="text">
+    <slider />
+  </div>
 </template>
 
 <script>
-export default {};
+import Slider from "../indexCompo/slider.vue";
+export default {
+  components: {
+    Slider,
+  },
+};
 </script>
 
 <style scoped>
