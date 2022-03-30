@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <app-header />
-    <app-menu />
-    <slot />
-    <app-footer />
-  </div>
+  <app-header />
+  <app-menu />
+  <slot />
+  <app-footer />
 </template>
 
 <script>
