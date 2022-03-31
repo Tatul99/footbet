@@ -8,7 +8,7 @@
             class="btn cursor-pointer"
             v-for="(item, i) in btnName"
             :key="item"
-            @click="activeIndex = i"
+            @click="(activeIndex = i), (bool = i)"
             :class="activeIndex == i ? 'activebtn' : ''"
           >
             <p class="text">{{ item }}</p>
@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-    <div>
+    <div v-if="bool == 0">
       <matches-compo />
       <div class="col-12">
         <div class="row justify-center">
@@ -38,7 +38,37 @@
                   {{ divs.time }}
                 </div>
               </div>
-              <div class="col-5 bg-blue"></div>
+              <div class="col-5">
+                <div class="row justify-between">
+                  <div class="col-4">
+                    <div class="row justify-between">
+                      <div class="col-7 row items-center">
+                        {{ divs.name1 }}
+                      </div>
+                      <div class="col-5">
+                        <img :src="divs.gerb1" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div
+                      class="hashiv row full-height items-center justify-center"
+                    >
+                      {{ divs.hashiv }}
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="row justify-between">
+                      <div class="col-5 row items-center">
+                        <img :src="divs.gerb2" alt="" />
+                      </div>
+                      <div class="col-7 row items-center justify-center">
+                        {{ divs.name2 }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="col-3">
                 <div class="full-height row justify-center items-center">
                   <button
@@ -58,7 +88,23 @@
           </div>
         </div>
       </div>
+      <div class="col-12 q-mt-lg">
+        <div class="row justify-center">
+          <div class="col-10 bg-black">
+            <div class="row justify-center">
+              <div class="col-2" style="height: 50px">
+                <div class="row full-height items-center justify-around">
+                  <div class="left"></div>
+                  <div class="round"></div>
+                  <div class="right"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div v-if="bool == 1"></div>
   </div>
 </template>
 
@@ -71,14 +117,15 @@ export default {
       activeIndex: 0,
       index: 0,
       btnIndex: 1,
+      bool: 0,
       btnName: ["Матчи дня", "Правила игры"],
       matches: [
         {
           name1: "Атлетико",
           name2: "Атлетик",
           erkir: "Испания",
-          gerb1: "",
-          gerb2: "",
+          gerb1: "gerbs/atletiko-madrid.svg",
+          gerb2: "gerbs/atletik-Bilbao.svg",
           hashiv: "2 : 1",
           time: "20:00  начался",
         },
@@ -86,8 +133,8 @@ export default {
           name1: "Барселона",
           name2: "ПСЖ",
           erkir: "Испания",
-          gerb1: "",
-          gerb2: "",
+          gerb1: "gerbs/barselona.svg",
+          gerb2: "gerbs/psg.svg",
           hashiv: " - ",
           time: "21:10   не начался",
         },
@@ -96,17 +143,17 @@ export default {
           name1: "Марсель",
           name2: "Ренн",
           erkir: "Испания",
-          gerb1: "",
-          gerb2: "",
+          gerb1: "gerbs/marsel.svg",
+          gerb2: "gerbs/Renn.svg",
           hashiv: " - ",
           time: "22:20   не начался",
         },
         {
           name1: "Ливерпул",
-          name2: "РБ Лейпциг",
+          name2: " RB",
           erkir: "Испания",
-          gerb1: "",
-          gerb2: "",
+          gerb1: "gerbs/liverpul.svg",
+          gerb2: "gerbs/RB.svg",
           hashiv: " - ",
           time: "23:30   не начался",
         },
@@ -199,5 +246,31 @@ export default {
 .active-btn {
   background: #a10b45;
   border: unset;
+}
+.hashiv {
+  color: #0bbe28;
+  font-size: 46px;
+  line-height: 53px;
+  letter-spacing: 0.05em;
+}
+.round {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #a10b45;
+}
+.left {
+  background-image: url("../../public/index/left.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 34px;
+  height: 30px;
+}
+.right {
+  background-image: url("../../public/index/right.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 34px;
+  height: 30px;
 }
 </style>
