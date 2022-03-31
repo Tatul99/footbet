@@ -90,7 +90,7 @@
       </div>
       <div class="col-12 q-mt-lg">
         <div class="row justify-center">
-          <div class="col-10 bg-black">
+          <div class="col-10 q-mb-md bg-black">
             <div class="row justify-center">
               <div class="col-2" style="height: 50px">
                 <div class="row full-height items-center justify-around">
@@ -104,14 +104,17 @@
         </div>
       </div>
     </div>
-    <div v-if="bool == 1"></div>
+    <div v-if="bool == 1">
+      <rules />
+    </div>
   </div>
 </template>
 
 <script>
+import Rules from "./rules.vue";
 import MatchesCompo from "./matches-compo.vue";
 export default {
-  components: { MatchesCompo },
+  components: { MatchesCompo, Rules },
   data() {
     return {
       activeIndex: 0,
