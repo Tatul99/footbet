@@ -18,7 +18,47 @@
         </div>
       </div>
     </div>
-    <matches-compo />
+    <div>
+      <matches-compo />
+      <div class="col-12">
+        <div class="row justify-center">
+          <div
+            class="col-10 bg-black q-mt-lg items"
+            v-for="(divs, i) in matches"
+            :key="divs"
+            style="height: 50px"
+          >
+            <div class="erkir">{{ divs.erkir }}</div>
+            <div class="row justify-around full-height">
+              <div class="col-3">
+                <div
+                  class="full-height row justify-center items-center"
+                  :class="index == i ? 'activeTime' : 'pasive'"
+                >
+                  {{ divs.time }}
+                </div>
+              </div>
+              <div class="col-5 bg-blue"></div>
+              <div class="col-3">
+                <div class="full-height row justify-center items-center">
+                  <button
+                    class="match-btn cursor-pointer"
+                    @click="btnIndex = i"
+                    :disabled="i == 0"
+                    :class="{
+                      'active-btn': btnIndex == i,
+                      'pasive-btn': i === 0,
+                    }"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -29,7 +69,48 @@ export default {
   data() {
     return {
       activeIndex: 0,
+      index: 0,
+      btnIndex: 1,
       btnName: ["Матчи дня", "Правила игры"],
+      matches: [
+        {
+          name1: "Атлетико",
+          name2: "Атлетик",
+          erkir: "Испания",
+          gerb1: "",
+          gerb2: "",
+          hashiv: "2 : 1",
+          time: "20:00  начался",
+        },
+        {
+          name1: "Барселона",
+          name2: "ПСЖ",
+          erkir: "Испания",
+          gerb1: "",
+          gerb2: "",
+          hashiv: " - ",
+          time: "21:10   не начался",
+        },
+
+        {
+          name1: "Марсель",
+          name2: "Ренн",
+          erkir: "Испания",
+          gerb1: "",
+          gerb2: "",
+          hashiv: " - ",
+          time: "22:20   не начался",
+        },
+        {
+          name1: "Ливерпул",
+          name2: "РБ Лейпциг",
+          erkir: "Испания",
+          gerb1: "",
+          gerb2: "",
+          hashiv: " - ",
+          time: "23:30   не начался",
+        },
+      ],
     };
   },
 };
@@ -85,5 +166,38 @@ export default {
     #d10a52 1.6%,
     rgba(5, 5, 11, 0) 106.17%
   );
+}
+.items {
+  position: relative;
+}
+.erkir {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  font-size: 19px;
+}
+.activeTime {
+  color: #ffffff;
+}
+.pasive {
+  color: rgba(255, 255, 255, 0.35);
+}
+.match-btn {
+  width: 102px;
+  height: 35px;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  background: unset;
+  font-size: 14px;
+  color: #ffffff;
+}
+.pasive-btn {
+  color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.35);
+  border: unset;
+}
+.active-btn {
+  background: #a10b45;
+  border: unset;
 }
 </style>

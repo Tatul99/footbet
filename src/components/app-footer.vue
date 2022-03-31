@@ -87,28 +87,28 @@ export default {};
   border-right: 1px solid #d10a52;
 }
 .phone {
-  background-image: url("../../public/headerImage/phone.png");
+  background-image: url("../../public/headerImage/phone.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 24px;
   height: 24px;
 }
 .facebook {
-  background-image: url("../../public/headerImage/facebook.png");
+  background-image: url("../../public/headerImage/facebook.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 15px;
   height: 27px;
 }
 .telegram {
-  background-image: url("../../public/headerImage/telegram.png");
+  background-image: url("../../public/headerImage/telegram.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 29px;
   height: 25px;
 }
 .watsapp {
-  background-image: url("../../public/headerImage/Watssap.png");
+  background-image: url("../../public/headerImage/Watssap.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 29px;
@@ -122,7 +122,7 @@ export default {};
   height: 30px;
 }
 .viber {
-  background-image: url("../../public/headerImage/viber.png");
+  background-image: url("../../public/headerImage/viber.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 29px;
