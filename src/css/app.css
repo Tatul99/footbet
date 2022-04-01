@@ -27,12 +27,14 @@ body {
 }
 #q-app {
   min-height: 10vh;
+  background: #102135;
 }
 .carousel .q-carousel__control {
   width: 130px;
 
   background: rgba(255, 255, 255, 0.07) !important;
 }
+
 .q-pa-md {
   background: rgba(42, 64, 90);
 }
