@@ -135,6 +135,14 @@ export default {
     // console.log(this.sliderItems);
     // console.log(document.documentElement.clientWidth);
     window.addEventListener("resize", this.getDimensions);
+    console.log(window.innerWidth);
+    if (window.innerWidth < 1597) {
+      this.slideToShow = 3;
+    }
+    if (window.innerWidth < 1291) this.slideToShow = 2;
+  },
+  unmounted() {
+    window.addEventListener("resize", this.getDimensions);
   },
   methods: {
     // log(){
@@ -143,9 +151,10 @@ export default {
     getDimensions() {
       this.width = document.documentElement.clientWidth;
       // this.height = document.documentElement.clientHeight;
-      if (this.width >= 1597) this.slideToShow = 4;
-      if (this.width <= 1597) this.slideToShow = 3;
-      if (this.width <= 1290) this.slideToShow = 2;
+      if (this.width + 15 <= 1597) this.slideToShow = 3;
+      if (this.width + 15 <= 1290) this.slideToShow = 2;
+      if (this.width + 15 >= 1597) this.slideToShow = 4;
+
       console.log(this.width + 15);
     },
   },
