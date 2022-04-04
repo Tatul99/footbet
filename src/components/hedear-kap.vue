@@ -1,27 +1,57 @@
 <template>
   <div class="content2 column">
     <div class="row justify-center">
-      <div class="phone"></div>
+      <q-btn>
+        <div class="phone"></div>
+        <q-tooltip anchor="center right" self="center left" :offset="[10, 10]">
+          <strong>+34 672 314 808</strong>
+        </q-tooltip>
+      </q-btn>
     </div>
     <div class="line"></div>
     <div class="row justify-center">
-      <div class="facebook"></div>
+      <q-btn>
+        <div class="facebook"></div>
+        <q-tooltip anchor="center right" self="center left" :offset="[10, 10]">
+          <strong></strong>
+        </q-tooltip>
+      </q-btn>
     </div>
     <div class="line"></div>
     <div class="row justify-center">
-      <div class="telegram"></div>
+      <q-btn>
+        <div class="telegram"></div>
+        <q-tooltip anchor="center right" self="center left" :offset="[10, 10]">
+          <strong>+34 672 314 808</strong>
+        </q-tooltip>
+      </q-btn>
     </div>
     <div class="line"></div>
     <div class="row justify-center">
-      <div class="watsapp"></div>
+      <q-btn>
+        <div class="watsapp"></div>
+        <q-tooltip anchor="center right" self="center left" :offset="[10, 10]">
+          <strong>+34 672 314 808</strong>
+        </q-tooltip>
+      </q-btn>
     </div>
     <div class="line"></div>
     <div class="row justify-center">
-      <div class="instagram"></div>
+      <q-btn>
+        <div class="instagram"></div>
+        <q-tooltip anchor="center right" self="center left" :offset="[10, 10]">
+          <strong></strong>
+        </q-tooltip>
+      </q-btn>
     </div>
     <div class="line"></div>
     <div class="row justify-center">
-      <div class="viber"></div>
+      <q-btn>
+        <div class="viber"></div>
+        <q-tooltip anchor="center right" self="center left" :offset="[10, 10]">
+          <strong>+34 672 314 808</strong>
+        </q-tooltip>
+      </q-btn>
     </div>
     <div class="line"></div>
   </div>

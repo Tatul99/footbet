@@ -96,4 +96,9 @@ export default {
     rgba(5, 5, 11, 0) 106.17%
   );
 }
+@media all and (max-width: 500px) {
+  .manu {
+    display: none;
+  }
+}
 </style>
