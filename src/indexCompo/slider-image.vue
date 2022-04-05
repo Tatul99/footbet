@@ -76,7 +76,7 @@ export default {
 @media all and (max-width: 500px) {
   .line-div {
     width: 140px !important;
-    height: 140px;
+    height: 140px !important;
   }
   .line {
     width: 169px;
@@ -96,14 +96,14 @@ export default {
     width: 169px;
     border: 1px solid #9e094a;
     position: absolute;
-    bottom: 180px;
+    bottom: -15px;
     left: -3%;
   }
   .line4 {
     width: 155px;
     border: 1px solid #9e094a;
     position: absolute;
-    bottom: 170px;
+    bottom: -5px;
     left: 2%;
   }
   .img-text {

@@ -1,7 +1,7 @@
 <template>
   <div class="foot-main row justify-between" style="width: 100vw">
-    <div class="col-6">
-      <div class="row justify-end q-mt-xl">
+    <div class="col-12 col-md-6">
+      <div class="row justify-end container1 q-mt-xl">
         <div class="item1 col-2 q-mr-lg">
           <div class="col-6 row-justify-center">Прогнозы Игры Новости</div>
         </div>
@@ -17,10 +17,12 @@
         </div>
       </div>
     </div>
-    <div class="col-6">
+    <div class="col-12 col-md-6 container">
       <div class="row justify-center">
-        <div class="col-6 column">
+        <div class="col-12">
           <div class="row justify-center q-mb-md">Мы в соц. сетях</div>
+        </div>
+        <div class="col-6 column container2">
           <div class="row justify-around items-center">
             <div class="row justify-center">
               <div class="phone"></div>
@@ -156,5 +158,41 @@ export default {};
   background-size: 100% 100%;
   width: 69px;
   height: 41px;
+}
+
+@media all and (max-width: 500px) {
+  .container1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center !important;
+  }
+  .container2 {
+    flex-direction: column-reverse;
+  }
+  .foot-main {
+    height: unset;
+  }
+  .paypal {
+    width: 51px;
+    height: 12px;
+  }
+  .visa {
+    width: 42px;
+    height: 13px;
+  }
+  .master {
+    width: 31px;
+    height: 18px;
+  }
+  .image {
+    width: 330px;
+    height: 170px;
+    top: 49%;
+    left: -40px;
+  }
+  .container {
+    z-index: 100;
+    justify-content: flex-end;
+  }
 }
 </style>
