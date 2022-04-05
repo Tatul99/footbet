@@ -1,7 +1,7 @@
 <template>
   <div class="q-pa-md">
     <q-carousel
-      class="bg"
+      class="bg slider"
       v-model="slide"
       transition-prev="slide-right"
       transition-next="slide-left"
@@ -20,6 +20,7 @@
         :key="i"
         :name="i"
         class="column no-wrap"
+        style="padding: 0"
       >
         <div class="row fit justify-between items-center q-col-gutter no-wrap">
           <slider-image :arr="arr" />
@@ -169,5 +170,11 @@ export default {
 .img-text {
   /* height: 88px; */
   background: rgba(0, 0, 0, 0.6);
+}
+
+@media all and (max-width: 500px) {
+  .slider {
+    height: 300px !important;
+  }
 }
 </style>

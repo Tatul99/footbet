@@ -17,7 +17,7 @@
       <div class="line"></div>
       <div class="line2"></div>
       <q-img
-        class="rounded-borders col-6 col-md-2 row items-end"
+        class="rounded-borders col-1 col-md-2 row items-end"
         :src="img.img"
       >
         <div class=" ">
@@ -71,5 +71,44 @@ export default {
   position: absolute;
   bottom: -20px;
   left: 22%;
+}
+
+@media all and (max-width: 500px) {
+  .line-div {
+    width: 140px !important;
+    height: 140px;
+  }
+  .line {
+    width: 169px;
+
+    position: absolute;
+    top: -10px;
+    left: -1%;
+  }
+  .line2 {
+    width: 155px;
+    border: 1px solid #9e094a;
+    position: absolute;
+    top: -20px;
+    left: 2%;
+  }
+  .line3 {
+    width: 169px;
+    border: 1px solid #9e094a;
+    position: absolute;
+    bottom: 180px;
+    left: -3%;
+  }
+  .line4 {
+    width: 155px;
+    border: 1px solid #9e094a;
+    position: absolute;
+    bottom: 170px;
+    left: 2%;
+  }
+  .img-text {
+    font-size: 10px;
+    line-height: 10px;
+  }
 }
 </style>

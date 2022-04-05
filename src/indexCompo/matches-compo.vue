@@ -9,7 +9,7 @@
           </div>
           <div class="calendar"></div>
         </div>
-        <div class="row justify-center" style="height: 50px">
+        <div class="row justify-center content-2" style="height: 50px">
           <div class="col-6">
             <div class="row justify-around">
               <div class="col-12">
@@ -143,5 +143,20 @@ export default {
 .items {
   /* padding-right: 30px; */
   border-right: 1px solid #d10a52;
+}
+
+@media all and (max-width: 500px) {
+  .mini-title {
+    font-size: 12px;
+  }
+  .content-2 {
+    display: none;
+  }
+  .calendar {
+    width: 14px;
+    height: 14px;
+    top: 60px;
+    right: 10px;
+  }
 }
 </style>

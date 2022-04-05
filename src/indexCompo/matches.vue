@@ -2,7 +2,7 @@
   <div class="main">
     <div class="title text-h4 row justify-center">Матчи</div>
     <div class="row justify-center">
-      <div class="col-4">
+      <div class="col-8 col-md-5">
         <div class="row justify-between">
           <button
             class="btn cursor-pointer"
@@ -30,23 +30,23 @@
           >
             <div class="erkir">{{ divs.erkir }}</div>
             <div class="row justify-around full-height">
-              <div class="col-3">
+              <div class="col-2 col-md-3">
                 <div
-                  class="full-height row justify-center items-center"
+                  class="full-height row time-div justify-center items-center"
                   :class="index == i ? 'activeTime' : 'pasive'"
                 >
                   {{ divs.time }}
                 </div>
               </div>
-              <div class="col-5">
+              <div class="col-8 col-md-5">
                 <div class="row justify-between">
                   <div class="col-4">
                     <div class="row justify-between">
-                      <div class="col-7 row items-center">
+                      <div class="col-12 col-md-7 row items-center">
                         {{ divs.name1 }}
                       </div>
                       <div class="col-5">
-                        <img :src="divs.gerb1" alt="" />
+                        <img class="img" :src="divs.gerb1" alt="" />
                       </div>
                     </div>
                   </div>
@@ -59,8 +59,8 @@
                   </div>
                   <div class="col-3">
                     <div class="row justify-between">
-                      <div class="col-5 row items-center">
-                        <img :src="divs.gerb2" alt="" />
+                      <div class="col-12 col-md-5 row items-center">
+                        <img class="img" :src="divs.gerb2" alt="" />
                       </div>
                       <div class="col-7 row items-center justify-center">
                         {{ divs.name2 }}
@@ -69,7 +69,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-3">
+              <div class="col-2 col-md-3">
                 <div class="full-height row justify-center items-center">
                   <button
                     class="match-btn cursor-pointer"
@@ -92,7 +92,7 @@
         <div class="row justify-center">
           <div class="col-10 q-mb-md bg-black">
             <div class="row justify-center">
-              <div class="col-2" style="height: 50px">
+              <div class="col-6 col-md-2" style="height: 50px">
                 <div class="row full-height items-center justify-around">
                   <div class="left"></div>
                   <div class="round"></div>
@@ -183,7 +183,7 @@ export default {
 .line {
   position: absolute;
   width: 0px;
-  height: 70px;
+  height: 100%;
   left: 10px;
   top: -1px;
 
@@ -202,13 +202,13 @@ export default {
 .activeLine {
   position: absolute;
   width: 0px;
-  height: 70px;
+  height: 100%;
   left: 10px;
   top: -1px;
   border: 1px solid #102135;
 }
 .activebtn {
-  height: 63px;
+  height: 100%;
   position: relative;
   margin-right: 40px;
   background: linear-gradient(
@@ -275,5 +275,40 @@ export default {
   background-size: 100% 100%;
   width: 34px;
   height: 30px;
+}
+
+@media all and (max-width: 500px) {
+  .btn {
+    width: 93px;
+    height: 30px;
+  }
+  .text {
+    font-size: 12px;
+    padding: 0;
+  }
+  .line {
+    left: 1px;
+  }
+  .activeLine {
+    left: 1px;
+  }
+  .img {
+    width: 25px;
+    height: 25px;
+  }
+  .time-div {
+    height: unset !important;
+  }
+  .hashiv {
+    font-size: 16px;
+  }
+  .img {
+    width: 28px;
+
+    height: 28px;
+  }
+  .erkir {
+    left: 40%;
+  }
 }
 </style>

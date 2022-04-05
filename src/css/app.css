@@ -41,7 +41,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-. .q-pa-md {
+.q-pa-md {
   background: rgba(42, 64, 90);
 }
 @media all and (max-width: 500px) {
