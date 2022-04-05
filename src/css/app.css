@@ -48,4 +48,7 @@ body {
   body {
     font-size: 11px;
   }
+  .carousel .q-carousel__control {
+    width: 30px;
+  }
 }

@@ -55,7 +55,7 @@
               </div>
             </div>
             <div class="row justify-center">
-              <div class="col-2 q-mb-md">
+              <div class="col-6 col-md-2 q-mb-md">
                 <div class="row full-height items-center justify-around">
                   <div class="left"></div>
                   <div class="round"></div>

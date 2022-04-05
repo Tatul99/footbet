@@ -11,7 +11,7 @@
       <q-carousel-slide v-for="(item, i) in reviews" :key="item" :name="i + 1">
         <div class="container q-ma-lg" v-for="info in item" :key="info">
           <div class="row justify-center">
-            <div class="col-8">
+            <div class="col-12 col-md-8">
               <div class="col justify-center items-around">
                 <div class="admin col-10">
                   <div class="row">
@@ -52,7 +52,7 @@
                         <div class="row justify-center">
                           <div class="col-8">
                             <div class="row justify-end">
-                              <div class="like col-3 row items-center">
+                              <div class="like col-5 col-md-3 row items-center">
                                 <img
                                   src="../../public/index/like.svg"
                                   alt=""
@@ -61,7 +61,7 @@
                                 />
                                 {{ info.like }}
                               </div>
-                              <div class="ignore col-3">
+                              <div class="ignore col-5 col-md-3">
                                 <div class="row justify-center items-center">
                                   <img
                                     src="../../public/index/ignore.svg"
@@ -87,7 +87,7 @@
     </q-carousel>
     <div class="textArea-div q-mb-xl col-12">
       <div class="row justify-center">
-        <div class="col-8">
+        <div class="col-11 col-md-8">
           <div>
             <q-rating
               v-model="textAreaRating"
@@ -287,5 +287,11 @@ export default {
   color: rgb(168, 168, 163);
   margin: 0;
   padding: 10px 20px 10px 20px;
+}
+@media all and (max-width: 500px) {
+  .container {
+    margin: 0;
+    margin-bottom: 20px;
+  }
 }
 </style>

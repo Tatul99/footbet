@@ -22,7 +22,9 @@
         class="column no-wrap"
         style="padding: 0"
       >
-        <div class="row fit justify-between items-center q-col-gutter no-wrap">
+        <div
+          class="row fit col-12 sliders-div justify-between items-center q-col-gutter no-wrap"
+        >
           <slider-image :arr="arr" />
         </div>
       </q-carousel-slide>
@@ -155,6 +157,7 @@ export default {
       if (this.width + 15 <= 1597) this.slideToShow = 3;
       if (this.width + 15 <= 1290) this.slideToShow = 2;
       if (this.width + 15 >= 1597) this.slideToShow = 4;
+      // if (this.width + 15 <= 500) this.slideToShow = 1;
 
       console.log(this.width + 15);
     },
@@ -175,6 +178,10 @@ export default {
 @media all and (max-width: 500px) {
   .slider {
     height: 300px !important;
+  }
+  .sliders-div {
+    flex-direction: row;
+    justify-content: center;
   }
 }
 </style>

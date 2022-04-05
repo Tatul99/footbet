@@ -4,7 +4,7 @@
       <div class="pragnoz text-h4">Прогнозы</div>
     </div>
   </div>
-  <div class="content" style="min-height: 700px">
+  <div class="content" style="">
     <div class="q-pa-md stadion">
       <div class="row content2 justify-center items-center">
         <q-carousel
@@ -21,13 +21,13 @@
             class="col-1 row justify-center items-center"
             :name="1"
           >
-            <div class="matches col-7">
+            <div class="matches col-10 col-md-7">
               <div class="row justify-between items-around full-height">
                 <div class="col-3">
                   <div class="gerb"></div>
                   <div class="name col-12">
                     <div class="row justify-center">
-                      <div class="text-h4">Барселона</div>
+                      <div class="text-h4 tiemName">Барселона</div>
                     </div>
                   </div>
                 </div>
@@ -41,7 +41,7 @@
                   <div class="gerb2"></div>
                   <div class="name col-12">
                     <div class="row justify-center">
-                      <div class="text-h4">ПСЖ</div>
+                      <div class="text-h4 tiemName">ПСЖ</div>
                     </div>
                   </div>
                 </div>
@@ -49,13 +49,13 @@
             </div>
           </q-carousel-slide>
           <q-carousel-slide class="row justify-center items-center" :name="2">
-            <div class="matches col-7">
+            <div class="matches col-10 col-md-7">
               <div class="row justify-between items-around full-height">
                 <div class="col-3">
                   <div class="gerb"></div>
                   <div class="name col-12">
                     <div class="row justify-center">
-                      <div class="text-h4">Барселона</div>
+                      <div class="text-h4 tiemName">Барселона</div>
                     </div>
                   </div>
                 </div>
@@ -69,7 +69,7 @@
                   <div class="gerb2"></div>
                   <div class="name col-12">
                     <div class="row justify-center">
-                      <div class="text-h4">ПСЖ</div>
+                      <div class="text-h4 tiemName">ПСЖ</div>
                     </div>
                   </div>
                 </div>
@@ -77,13 +77,13 @@
             </div>
           </q-carousel-slide>
           <q-carousel-slide class="row justify-center items-center" :name="3">
-            <div class="matches col-7">
+            <div class="matches col-10 col-md-7">
               <div class="row justify-between items-around full-height">
                 <div class="col-3">
                   <div class="gerb"></div>
                   <div class="name col-12">
                     <div class="row justify-center">
-                      <div class="text-h4">Барселона</div>
+                      <div class="text-h4 tiemName">Барселона</div>
                     </div>
                   </div>
                 </div>
@@ -97,7 +97,7 @@
                   <div class="gerb2"></div>
                   <div class="name col-12">
                     <div class="row justify-center">
-                      <div class="text-h4">ПСЖ</div>
+                      <div class="text-h4 tiemName">ПСЖ</div>
                     </div>
                   </div>
                 </div>
@@ -105,13 +105,13 @@
             </div></q-carousel-slide
           >
           <q-carousel-slide class="row justify-center items-center" :name="4">
-            <div class="matches col-7">
+            <div class="matches col-10 col-md-7">
               <div class="row justify-between items-around">
                 <div class="col-3">
                   <div class="gerb"></div>
                   <div class="name col-12">
                     <div class="row justify-center">
-                      <div class="text-h4">Барселона</div>
+                      <div class="text-h4 tiemName">Барселона</div>
                     </div>
                   </div>
                 </div>
@@ -125,7 +125,7 @@
                   <div class="gerb2"></div>
                   <div class="name col-12">
                     <div class="row justify-center">
-                      <div class="text-h4">ПСЖ</div>
+                      <div class="text-h4 tiemName">ПСЖ</div>
                     </div>
                   </div>
                 </div>
@@ -194,5 +194,27 @@ export default {
 }
 .cont {
   background: #102135;
+}
+.content {
+  height: 700px;
+}
+@media all and (max-width: 500px) {
+  .gerb {
+    width: 46px;
+    height: 47px;
+  }
+  .tiemName {
+    font-size: 14px !important;
+  }
+  .time {
+    font-size: 13px;
+  }
+  .gerb2 {
+    width: 46px;
+    height: 47px;
+  }
+  .content {
+    height: unset !important;
+  }
 }
 </style>

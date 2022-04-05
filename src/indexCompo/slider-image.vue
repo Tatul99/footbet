@@ -1,5 +1,5 @@
 <template>
-  <div class="col-12 row justify-between line-div">
+  <div class="col-12 row justify-between items-center line-div2">
     <!-- <div class="line"></div>
     <div class="line2"></div>
     <div class="line3"></div>
@@ -109,6 +109,9 @@ export default {
   .img-text {
     font-size: 10px;
     line-height: 10px;
+  }
+  .line-div2 {
+    height: 150px !important;
   }
 }
 </style>
