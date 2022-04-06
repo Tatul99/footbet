@@ -1,30 +1,31 @@
 <template>
   <div class="header row justify-end" style="width: 100vw; min-height: 50px">
+    <q-btn class="menu2" :class="bool ? '' : 'chenge-position'">
+      <div class="menuitem"></div>
+      <div class="menuitem"></div>
+      <div class="menuitem"></div>
+      <q-menu>
+        <q-list dense style="min-width: 100px">
+          <q-item
+            class="menu-container"
+            v-for="item in btnName"
+            :key="item"
+            clickable
+            v-close-popup
+          >
+            <q-item-section>{{ item }}</q-item-section>
+          </q-item>
+        </q-list>
+      </q-menu></q-btn
+    >
     <div
       class="col-11 column justify-end"
       :class="bool ? 'content' : ''"
       style="width: 96vw"
     >
       <headear-kap class="kap" v-if="bool" />
+
       <div class="row justify-center content2">
-        <q-btn class="menu2">
-          <div class="menuitem"></div>
-          <div class="menuitem"></div>
-          <div class="menuitem"></div>
-          <q-menu>
-            <q-list dense style="min-width: 100px">
-              <q-item
-                class="menu-container"
-                v-for="item in btnName"
-                :key="item"
-                clickable
-                v-close-popup
-              >
-                <q-item-section>{{ item }}</q-item-section>
-              </q-item>
-            </q-list>
-          </q-menu></q-btn
-        >
         <div class="menu2"></div>
         <div class="football" v-if="bool"></div>
         <div class="col-12 col-md-11 q-mt-lg" :class="bool ? 'container' : ''">
@@ -196,7 +197,7 @@ export default {
   display: none;
 }
 .menuitem {
-  width: 40px;
+  width: 27px;
   height: 4px;
   background: #fff;
   margin-bottom: 5px;
@@ -204,6 +205,10 @@ export default {
 .menu-container {
   background: #12112c;
   border: 1px solid #7e1a4a;
+}
+.chenge-position {
+  top: 90px;
+  left: -5px;
 }
 
 @media all and (max-width: 500px) {

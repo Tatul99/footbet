@@ -47,6 +47,21 @@ body {
 a {
   text-decoration: none;
 }
+::-webkit-scrollbar {
+  width: 11px;
+  height: 15px;
+
+  background: #ffffff;
+}
+::-webkit-scrollbar-track {
+  background: #1b1a30;
+}
+::-webkit-scrollbar-thumb {
+  width: 11px;
+  height: 15px;
+
+  background: #ffffff;
+}
 @media all and (max-width: 500px) {
   body {
     font-size: 11px;

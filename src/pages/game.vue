@@ -7,32 +7,34 @@
           <div class="col-12 q-mt-lg content">
             <div class="col-12 prise-content">
               <div class="row justify-center prise">цена</div>
-              <div
-                class="col-12 q-mb-md line"
-                v-for="(item, i) in prise"
-                :key="item"
-              >
-                <div class="row justify-between">
-                  <div class="col-7">
-                    <div class="row justify-between">
-                      <div class="col-4">{{ i + 1 }}.</div>
-                      <div class="col-6">
-                        <div class="row justify-start">
-                          Беспроигрышная стратегия
+              <div class="scroll-container">
+                <div
+                  class="col-12 q-mb-md line"
+                  v-for="(item, i) in prise"
+                  :key="item"
+                >
+                  <div class="row justify-between">
+                    <div class="col-7">
+                      <div class="row justify-between">
+                        <div class="col-4">{{ i + 1 }}.</div>
+                        <div class="col-6">
+                          <div class="row justify-start">
+                            Беспроигрышная стратегия
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-5">
-                    <div class="row justify-around">
-                      <div class="col-3">{{ item }}</div>
-                      <button
-                        class="col-3 btn"
-                        :class="activeIndex === i ? 'active-btn' : ''"
-                        @click="activeIndex = i"
-                      >
-                        Купить
-                      </button>
+                    <div class="col-5">
+                      <div class="row justify-around">
+                        <div class="col-3">{{ item }}</div>
+                        <button
+                          class="col-3 btn"
+                          :class="activeIndex === i ? 'active-btn' : ''"
+                          @click="activeIndex = i"
+                        >
+                          Купить
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -104,5 +106,24 @@ export default {
 .active-btn {
   background: #8e0b40;
   border: unset;
+}
+.scroll-container {
+  height: 300px;
+  overflow: auto;
+}
+::-webkit-scrollbar {
+  width: 11px;
+  height: 15px;
+
+  background: #ffffff;
+}
+::-webkit-scrollbar-track {
+  background: #1b1a30;
+}
+::-webkit-scrollbar-thumb {
+  width: 11px;
+  height: 15px;
+
+  background: #ffffff;
 }
 </style>
