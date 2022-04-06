@@ -51,7 +51,7 @@ export default {
         },
         {
           name: "О нас",
-          path: "/",
+          path: "/about",
         },
         {
           name: "Контакты",

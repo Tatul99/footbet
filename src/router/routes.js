@@ -21,6 +21,13 @@ const routes = [
       layout: "main-layout",
     },
   },
+  {
+    path: "/about",
+    component: () => import("../pages/about.vue"),
+    meta: {
+      layout: "main-layout",
+    },
+  },
   // // Always leave this as last one,
   // // but you can also remove it
   // {
