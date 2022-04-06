@@ -78,13 +78,6 @@ export default {
     HeadearKap,
   },
 
-  mounted() {
-    console.log(this.$route.path);
-    if (this.$route.path == "/") {
-      this.bool = true;
-    } else bool = false;
-    console.log(this.btnName);
-  },
   data() {
     return {
       lenguageBool: false,
@@ -118,9 +111,23 @@ export default {
       ],
     };
   },
+  // mounted() {
+  //   console.log(this.$route.path);
+  //   if (this.$route.path === "/") {
+  //     this.bool = true;
+  //   } else bool = false;
+  //   console.log(this.btnName);
+  // },
   methods: {
     log() {
       console.log(this.arjeq);
+    },
+    checkpath() {
+      console.log(this.$route.path);
+      if (this.$route.path === "/") {
+        this.bool = true;
+      } else bool = false;
+      console.log(this.btnName);
     },
   },
 };

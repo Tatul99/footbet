@@ -12,7 +12,9 @@
           @click="activeIndex = i"
           :class="activeIndex == i ? 'activebtn' : ''"
         >
-          <p class="text">{{ item }}</p>
+          <router-link :to="item.path"
+            ><p class="text">{{ item.name }}</p></router-link
+          >
 
           <div :class="activeIndex === i ? 'activeLine' : 'line'"></div>
         </button>
@@ -27,13 +29,34 @@ export default {
     return {
       activeIndex: 0,
       btnName: [
-        "Главная",
-        "Игры",
-        "Статистика матчей",
-        "Прогнозы/Оплата",
-        "Отзывы",
-        "О нас",
-        "Контакты",
+        {
+          name: "Главная",
+          path: "/",
+        },
+        {
+          name: "Игры",
+          path: "/game",
+        },
+        {
+          name: "Статистика матчей",
+          path: "/",
+        },
+        {
+          name: "Прогнозы/Оплата",
+          path: "/",
+        },
+        {
+          name: "Отзывы",
+          path: "/",
+        },
+        {
+          name: "О нас",
+          path: "/",
+        },
+        {
+          name: "Контакты",
+          path: "/",
+        },
       ],
     };
   },

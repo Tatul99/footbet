@@ -44,6 +44,9 @@ body {
 .q-pa-md {
   background: rgba(42, 64, 90);
 }
+a {
+  text-decoration: none;
+}
 @media all and (max-width: 500px) {
   body {
     font-size: 11px;
