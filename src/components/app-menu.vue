@@ -9,7 +9,7 @@
           class="btn cursor-pointer"
           v-for="(item, i) in btnName"
           :key="item"
-          @click="activeIndex = i"
+          @click="changeTab(i)"
           :class="activeIndex == i ? 'activebtn' : ''"
         >
           <router-link :to="item.path"
@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from "vuex";
 export default {
   data() {
     return {
@@ -59,6 +60,19 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    ...mapGetters("global", ["name1", "bool"]),
+  },
+  methods: {
+    ...mapMutations("global", ["changeBool"]),
+    changeTab(index) {
+      this.activeIndex = index;
+      this.changeBool(index === 0);
+    },
+  },
+  mounted() {
+    const a = [1, 2, 3];
   },
 };
 </script>

@@ -15,5 +15,18 @@ export default {
     AppMenu,
     AppFooter,
   },
+  data() {
+    return {
+      // bool: true,
+    };
+  },
+
+  // inject: ["bool"],
+  mounted() {
+    // console.log(this.bool);
+  },
+  updated() {
+    // console.log(this.bool);
+  },
 };
 </script>

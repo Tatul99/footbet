@@ -73,6 +73,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import HeadearKap from "./hedear-kap.vue";
 export default {
   components: {
@@ -82,7 +83,7 @@ export default {
   data() {
     return {
       lenguageBool: false,
-      bool: false,
+      // bool: false,
       arjeq: 1,
       btnName: [
         "Главная",
@@ -112,13 +113,17 @@ export default {
       ],
     };
   },
-  // mounted() {
-  //   console.log(this.$route.path);
-  //   if (this.$route.path === "/") {
-  //     this.bool = true;
-  //   } else bool = false;
-  //   console.log(this.btnName);
-  // },
+  computed: {
+    ...mapGetters("global", ["name1", "bool"]),
+  },
+  mounted() {
+    // console.log(this.$route.path);
+    // if (this.$route.path === "/") {
+    //   this.bool = true;
+    // } else bool = false;
+    // console.log(this.btnName);
+    console.log(this.name1, this.bool);
+  },
   methods: {
     log() {
       console.log(this.arjeq);

@@ -158,8 +158,6 @@ export default {
       if (this.width + 15 <= 1290) this.slideToShow = 2;
       if (this.width + 15 >= 1597) this.slideToShow = 4;
       // if (this.width + 15 <= 500) this.slideToShow = 1;
-
-      console.log(this.width + 15);
     },
   },
 };
