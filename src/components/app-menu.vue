@@ -44,7 +44,7 @@ export default {
         },
         {
           name: "Прогнозы/Оплата",
-          path: "/",
+          path: "/predictions",
         },
         {
           name: "Отзывы",

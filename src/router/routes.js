@@ -28,6 +28,13 @@ const routes = [
       layout: "main-layout",
     },
   },
+  {
+    path: "/predictions",
+    component: () => import("../pages/predictions.vue"),
+    meta: {
+      layout: "main-layout",
+    },
+  },
   // // Always leave this as last one,
   // // but you can also remove it
   // {
