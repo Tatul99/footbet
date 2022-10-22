@@ -148,7 +148,7 @@ export default {
     window.addEventListener("resize", this.getDimensions);
   },
   methods: {
-    // log(){
+    // log(){ x`
     //   console.log();
     // }
     getDimensions() {

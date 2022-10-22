@@ -111,19 +111,5 @@ export default {
   height: 300px;
   overflow: auto;
 }
-::-webkit-scrollbar {
-  width: 11px;
-  height: 15px;
 
-  background: #ffffff;
-}
-::-webkit-scrollbar-track {
-  background: #1b1a30;
-}
-::-webkit-scrollbar-thumb {
-  width: 11px;
-  height: 15px;
-
-  background: #ffffff;
-}
 </style>

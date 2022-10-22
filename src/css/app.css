@@ -14,6 +14,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+  background: #12112c;
   /* identical to box height */
 
   color: #ffffff;
@@ -61,6 +62,12 @@ a {
   height: 15px;
 
   background: #ffffff;
+}
+.q-field__native {
+  color: rgba(255, 255, 255, 0.5);
+}
+.q-placeholder {
+  height: 35px;
 }
 @media all and (max-width: 500px) {
   body {

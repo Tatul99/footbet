@@ -12,7 +12,7 @@
       class="line-div"
       v-for="img in arr"
       :key="img"
-      style="width: 372px; height: 323px"
+      style="width: 600px; height: 522px"
     >
       <div class="line"></div>
       <div class="line2"></div>
